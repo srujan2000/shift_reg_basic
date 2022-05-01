@@ -1,0 +1,462 @@
+<!DOCTYPE html><html><head>
+      <title>main</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      
+      <link rel="stylesheet" href="file:///c:\Users\SRUJAN\.vscode\extensions\shd101wyy.markdown-preview-enhanced-0.6.2\node_modules\@shd101wyy\mume\dependencies\katex\katex.min.css">
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      <style>
+      /**
+ * prism.js Github theme based on GitHub's theme.
+ * @author Sam Clarke
+ */
+code[class*="language-"],
+pre[class*="language-"] {
+  color: #333;
+  background: none;
+  font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  text-align: left;
+  white-space: pre;
+  word-spacing: normal;
+  word-break: normal;
+  word-wrap: normal;
+  line-height: 1.4;
+
+  -moz-tab-size: 8;
+  -o-tab-size: 8;
+  tab-size: 8;
+
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+}
+
+/* Code blocks */
+pre[class*="language-"] {
+  padding: .8em;
+  overflow: auto;
+  /* border: 1px solid #ddd; */
+  border-radius: 3px;
+  /* background: #fff; */
+  background: #f5f5f5;
+}
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+  padding: .1em;
+  border-radius: .3em;
+  white-space: normal;
+  background: #f5f5f5;
+}
+
+.token.comment,
+.token.blockquote {
+  color: #969896;
+}
+
+.token.cdata {
+  color: #183691;
+}
+
+.token.doctype,
+.token.punctuation,
+.token.variable,
+.token.macro.property {
+  color: #333;
+}
+
+.token.operator,
+.token.important,
+.token.keyword,
+.token.rule,
+.token.builtin {
+  color: #a71d5d;
+}
+
+.token.string,
+.token.url,
+.token.regex,
+.token.attr-value {
+  color: #183691;
+}
+
+.token.property,
+.token.number,
+.token.boolean,
+.token.entity,
+.token.atrule,
+.token.constant,
+.token.symbol,
+.token.command,
+.token.code {
+  color: #0086b3;
+}
+
+.token.tag,
+.token.selector,
+.token.prolog {
+  color: #63a35c;
+}
+
+.token.function,
+.token.namespace,
+.token.pseudo-element,
+.token.class,
+.token.class-name,
+.token.pseudo-class,
+.token.id,
+.token.url-reference .token.variable,
+.token.attr-name {
+  color: #795da3;
+}
+
+.token.entity {
+  cursor: help;
+}
+
+.token.title,
+.token.title .token.punctuation {
+  font-weight: bold;
+  color: #1d3e81;
+}
+
+.token.list {
+  color: #ed6a43;
+}
+
+.token.inserted {
+  background-color: #eaffea;
+  color: #55a532;
+}
+
+.token.deleted {
+  background-color: #ffecec;
+  color: #bd2c00;
+}
+
+.token.bold {
+  font-weight: bold;
+}
+
+.token.italic {
+  font-style: italic;
+}
+
+
+/* JSON */
+.language-json .token.property {
+  color: #183691;
+}
+
+.language-markup .token.tag .token.punctuation {
+  color: #333;
+}
+
+/* CSS */
+code.language-css,
+.language-css .token.function {
+  color: #0086b3;
+}
+
+/* YAML */
+.language-yaml .token.atrule {
+  color: #63a35c;
+}
+
+code.language-yaml {
+  color: #183691;
+}
+
+/* Ruby */
+.language-ruby .token.function {
+  color: #333;
+}
+
+/* Markdown */
+.language-markdown .token.url {
+  color: #795da3;
+}
+
+/* Makefile */
+.language-makefile .token.symbol {
+  color: #795da3;
+}
+
+.language-makefile .token.variable {
+  color: #183691;
+}
+
+.language-makefile .token.builtin {
+  color: #0086b3;
+}
+
+/* Bash */
+.language-bash .token.keyword {
+  color: #0086b3;
+}
+
+/* highlight */
+pre[data-line] {
+  position: relative;
+  padding: 1em 0 1em 3em;
+}
+pre[data-line] .line-highlight-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: transparent;
+  display: block;
+  width: 100%;
+}
+
+pre[data-line] .line-highlight {
+  position: absolute;
+  left: 0;
+  right: 0;
+  padding: inherit 0;
+  margin-top: 1em;
+  background: hsla(24, 20%, 50%,.08);
+  background: linear-gradient(to right, hsla(24, 20%, 50%,.1) 70%, hsla(24, 20%, 50%,0));
+  pointer-events: none;
+  line-height: inherit;
+  white-space: pre;
+}
+
+pre[data-line] .line-highlight:before, 
+pre[data-line] .line-highlight[data-end]:after {
+  content: attr(data-start);
+  position: absolute;
+  top: .4em;
+  left: .6em;
+  min-width: 1em;
+  padding: 0 .5em;
+  background-color: hsla(24, 20%, 50%,.4);
+  color: hsl(24, 20%, 95%);
+  font: bold 65%/1.5 sans-serif;
+  text-align: center;
+  vertical-align: .3em;
+  border-radius: 999px;
+  text-shadow: none;
+  box-shadow: 0 1px white;
+}
+
+pre[data-line] .line-highlight[data-end]:after {
+  content: attr(data-end);
+  top: auto;
+  bottom: .4em;
+}html body{font-family:"Helvetica Neue",Helvetica,"Segoe UI",Arial,freesans,sans-serif;font-size:16px;line-height:1.6;color:#333;background-color:#fff;overflow:initial;box-sizing:border-box;word-wrap:break-word}html body>:first-child{margin-top:0}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{line-height:1.2;margin-top:1em;margin-bottom:16px;color:#000}html body h1{font-size:2.25em;font-weight:300;padding-bottom:.3em}html body h2{font-size:1.75em;font-weight:400;padding-bottom:.3em}html body h3{font-size:1.5em;font-weight:500}html body h4{font-size:1.25em;font-weight:600}html body h5{font-size:1.1em;font-weight:600}html body h6{font-size:1em;font-weight:600}html body h1,html body h2,html body h3,html body h4,html body h5{font-weight:600}html body h5{font-size:1em}html body h6{color:#5c5c5c}html body strong{color:#000}html body del{color:#5c5c5c}html body a:not([href]){color:inherit;text-decoration:none}html body a{color:#08c;text-decoration:none}html body a:hover{color:#00a3f5;text-decoration:none}html body img{max-width:100%}html body>p{margin-top:0;margin-bottom:16px;word-wrap:break-word}html body>ul,html body>ol{margin-bottom:16px}html body ul,html body ol{padding-left:2em}html body ul.no-list,html body ol.no-list{padding:0;list-style-type:none}html body ul ul,html body ul ol,html body ol ol,html body ol ul{margin-top:0;margin-bottom:0}html body li{margin-bottom:0}html body li.task-list-item{list-style:none}html body li>p{margin-top:0;margin-bottom:0}html body .task-list-item-checkbox{margin:0 .2em .25em -1.8em;vertical-align:middle}html body .task-list-item-checkbox:hover{cursor:pointer}html body blockquote{margin:16px 0;font-size:inherit;padding:0 15px;color:#5c5c5c;background-color:#f0f0f0;border-left:4px solid #d6d6d6}html body blockquote>:first-child{margin-top:0}html body blockquote>:last-child{margin-bottom:0}html body hr{height:4px;margin:32px 0;background-color:#d6d6d6;border:0 none}html body table{margin:10px 0 15px 0;border-collapse:collapse;border-spacing:0;display:block;width:100%;overflow:auto;word-break:normal;word-break:keep-all}html body table th{font-weight:bold;color:#000}html body table td,html body table th{border:1px solid #d6d6d6;padding:6px 13px}html body dl{padding:0}html body dl dt{padding:0;margin-top:16px;font-size:1em;font-style:italic;font-weight:bold}html body dl dd{padding:0 16px;margin-bottom:16px}html body code{font-family:Menlo,Monaco,Consolas,'Courier New',monospace;font-size:.85em !important;color:#000;background-color:#f0f0f0;border-radius:3px;padding:.2em 0}html body code::before,html body code::after{letter-spacing:-0.2em;content:"\00a0"}html body pre>code{padding:0;margin:0;font-size:.85em !important;word-break:normal;white-space:pre;background:transparent;border:0}html body .highlight{margin-bottom:16px}html body .highlight pre,html body pre{padding:1em;overflow:auto;font-size:.85em !important;line-height:1.45;border:#d6d6d6;border-radius:3px}html body .highlight pre{margin-bottom:0;word-break:normal}html body pre code,html body pre tt{display:inline;max-width:initial;padding:0;margin:0;overflow:initial;line-height:inherit;word-wrap:normal;background-color:transparent;border:0}html body pre code:before,html body pre tt:before,html body pre code:after,html body pre tt:after{content:normal}html body p,html body blockquote,html body ul,html body ol,html body dl,html body pre{margin-top:0;margin-bottom:16px}html body kbd{color:#000;border:1px solid #d6d6d6;border-bottom:2px solid #c7c7c7;padding:2px 4px;background-color:#f0f0f0;border-radius:3px}@media print{html body{background-color:#fff}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{color:#000;page-break-after:avoid}html body blockquote{color:#5c5c5c}html body pre{page-break-inside:avoid}html body table{display:table}html body img{display:block;max-width:100%;max-height:100%}html body pre,html body code{word-wrap:break-word;white-space:pre}}.markdown-preview{width:100%;height:100%;box-sizing:border-box}.markdown-preview .pagebreak,.markdown-preview .newpage{page-break-before:always}.markdown-preview pre.line-numbers{position:relative;padding-left:3.8em;counter-reset:linenumber}.markdown-preview pre.line-numbers>code{position:relative}.markdown-preview pre.line-numbers .line-numbers-rows{position:absolute;pointer-events:none;top:1em;font-size:100%;left:0;width:3em;letter-spacing:-1px;border-right:1px solid #999;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.markdown-preview pre.line-numbers .line-numbers-rows>span{pointer-events:none;display:block;counter-increment:linenumber}.markdown-preview pre.line-numbers .line-numbers-rows>span:before{content:counter(linenumber);color:#999;display:block;padding-right:.8em;text-align:right}.markdown-preview .mathjax-exps .MathJax_Display{text-align:center !important}.markdown-preview:not([for="preview"]) .code-chunk .btn-group{display:none}.markdown-preview:not([for="preview"]) .code-chunk .status{display:none}.markdown-preview:not([for="preview"]) .code-chunk .output-div{margin-bottom:16px}.scrollbar-style::-webkit-scrollbar{width:8px}.scrollbar-style::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}.scrollbar-style::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,0.66);border:4px solid rgba(150,150,150,0.66);background-clip:content-box}html body[for="html-export"]:not([data-presentation-mode]){position:relative;width:100%;height:100%;top:0;left:0;margin:0;padding:0;overflow:auto}html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{position:relative;top:0}@media screen and (min-width:914px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{padding:2em calc(50% - 457px + 2em)}}@media screen and (max-width:914px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{font-size:14px !important;padding:1em}}@media print{html body[for="html-export"]:not([data-presentation-mode]) #sidebar-toc-btn{display:none}}html body[for="html-export"]:not([data-presentation-mode]) #sidebar-toc-btn{position:fixed;bottom:8px;left:8px;font-size:28px;cursor:pointer;color:inherit;z-index:99;width:32px;text-align:center;opacity:.4}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] #sidebar-toc-btn{opacity:1}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc{position:fixed;top:0;left:0;width:300px;height:100%;padding:32px 0 48px 0;font-size:14px;box-shadow:0 0 4px rgba(150,150,150,0.33);box-sizing:border-box;overflow:auto;background-color:inherit}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar{width:8px}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,0.66);border:4px solid rgba(150,150,150,0.66);background-clip:content-box}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc a{text-decoration:none}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc ul{padding:0 1.6em;margin-top:.8em}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc li{margin-bottom:.8em}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc ul{list-style-type:none}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{left:300px;width:calc(100% -  300px);padding:2em calc(50% - 457px -  150px);margin:0;box-sizing:border-box}@media screen and (max-width:1274px){html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{width:100%}}html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .markdown-preview{left:50%;transform:translateX(-50%)}html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .md-sidebar-toc{display:none}
+/* Please visit the URL below for more information: */
+/*   https://shd101wyy.github.io/markdown-preview-enhanced/#/customize-css */
+
+      </style>
+    </head>
+    <body for="html-export">
+      <div class="mume markdown-preview  ">
+      
+<h1>Interfacing 74HC595 Shift Register With Atmega2560 (Arduino Mega) </h1>
+<strong style="font-size:20px">
+We will interface 74HC595 shift register with Arduino Mega,send the input data serially and observe the output data using LEDs.
+</strong>
+<section>
+<h2>Contents</h2>
+<ul style="background-color:#c5d4cc;padding-top: 10px;padding-bottom: 10px;">
+<li><a href="#why"><h3>Why use a Shift Register</h3></a></li>
+<li><a href="#how"><h3>How 74HC595 shift register Works</h3></a></li>
+<li><a href="#pin"><h3>74HC595 Pinout</h3></a></li>
+<li><a href="#conn"><h3>Connections</h3></a></li>
+<li><a href="#code"><h3>Code</h3></a></li>
+<li><a href="#exp"><h3>Code explanation</h3></a></li>
+
+</ul>
+</section>
+<section id="why">
+<h2>Why Use a 74HC595 Shift Register</h2>
+<strong style="font-size:20px">
+Have you ever faced problem of having a limited GPIO on your microcontrollers. For example, you want to use 24 LEDs ,but your microcontroller doesn&apos;t have enough GPIO pins for 24 LEDs. Then , shift registers will helps you to solve the problem. Instead of sending the input data parallelly to LED&apos;s, we will use a shift register where input data is sent serially and output is parallel. Each 74HC595 shift register has 8 output pins and shift register can be chained together where you can connect multiple shift registers. As example mentioned above, we can chain three shift register to use 24 LEDs. 
+</strong></section><strong style="font-size:20px">
+<section id="how">
+<h2>How 74HC595 Shift Register Works</h2>
+<strong style="font-size:20px">
+74HC595 has two registers with 8-bits, one of them is shift register.
+shift register is used to shift incoming data in register whenever the clock is high, each time clock goes high, bits get shifted to left side of the regsiter.
+Data in Bit 0 gets shifted to Bit 1 position, data in Bit 1 gets shifted to Bit 2 position and so on. <br><br>
+</strong><p><strong style="font-size:20px">Another register is called latch or storage register, it is used to stored the contents of shift register.When the latch pin is made high, the contents of shifted register is copied to the storage register. Storage register is connected to output pins, if output is enabled, contents of storage regsiter can be seen at the output.<br>
+</strong></p>
+<section id="pin">
+<h2>74HC595 Pinout</h2>
+<img src="pinout.png" style="margin-bottom:20px">
+<strong style="font-size:20px"><br>
+Vcc - Connect to +5V of microcontroller<br>
+GND - Connect to Gnd pin of microcontroller <br>
+SER(Serial input) - We use this pin to send the serial data<br>
+SRCLK (Serial clock) - This is the clock pin, when we want to the data in the shift register to be shifted, this pin is made high, during each rising edge bits are shifted in the register.<br>
+RCLK (Regsiter clock)- This is the latch pin, when this pin is made high, contents of shift register copied into latch register and output can be seen.<br>
+SRCLR (shift register clear) - This pin is active low, when this pin is made low, the contents of shift register are cleared, all bits in the shift register are 0&apos;s.<br>
+OE (Output Enable) - This pin is active low, when this pin is made low, output can be seen at output pins.<br>
+QA,QB,QC,QD,QE,QF,QG,QH (Output) - when output enable is low, contents of latch regsiter can been at this pins(use LEDs to see the output).<br>
+QH&apos; -  This pin is useful, when multiple shift registers are used. QH&apos; pin of first register is connected to SER pin of second register.
+</strong>
+</section>
+<section id="conn">
+<h2>Connections</h2>
+<img src="ckt.jpg" style="margin-bottom:20px">
+<strong style="font-size:20px">
+Vcc and GND are connected to +5v and Gnd pin respectively <br>
+SER pin is connected to A0 pin <br>
+SRCLK pin is connected to A8 pin <br>
+RCLK pin is connected to D49 pin <br>
+OE pin connected to GND <br>
+SRCLR pin connected to +5v <br>
+QA to QH pins all are connected to LEDs.
+</strong>
+</section>
+<section id="code">
+<h2>Code</h2>
+<strong style="font-size:20px">
+Here is the code<br>
+</strong>
+<code>
+<p>void setup() {</p>
+<p>char data = 0x0F;<br>
+init();<br>
+out_ds(0x00);<br>
+out_clk(0x00);<br>
+out_latch(0x00);</p>
+<p>for(int i=0;i&lt;8;i++){<br>
+out_ds((data&gt;&gt;i)&amp;0x01);<br>
+clk_enable();<br>
+}<br>
+latch_enable();<br>
+}</p>
+<p>void init(){<br>
+char <em>ddr1 = (char</em>)0x30;//SER pin<br>
+*ddr1 = 0x01;</p>
+<p>char <em>ddr2 = (char</em>)0x107;//SCLK pin<br>
+*ddr2 = 0x01;</p>
+<p>char <em>ddr3 = (char</em>)0x10A;// RCLK pin<br>
+*ddr3 = 0x01;<br>
+}</p>
+<p>void out_ds(char data){<br>
+char <em>out = (char</em>)0x31;// SER pin<br>
+*out = data;<br>
+}</p>
+<p>void out_clk(char data){<br>
+char <em>out = (char</em>)0x108;// SCLK pin<br>
+*out = data;<br>
+}</p>
+<p>void out_latch(char data){<br>
+char <em>out = (char</em>)0x10B;// RCLK pin<br>
+*out = data;<br>
+}</p>
+<p>void clk_enable(){<br>
+out_clk(0x01);<br>
+delay1();<br>
+out_clk(0x00);<br>
+delay1();<br>
+}</p>
+<p>void latch_enable(){<br>
+out_latch(0x01);<br>
+delay1();<br>
+out_latch(0x00);<br>
+delay1();<br>
+}</p>
+<p>void delay1(){<br>
+volatile long i;<br>
+for(i=0;i&lt;100;i++);<br>
+}</p>
+<p>void loop() {<br>
+// put your main code here, to run repeatedly:</p>
+</code><p><code>}<br>
+</code></p>
+</section>
+<section id="exp">
+<h2>Code Explanation</h2>
+<code>
+<p>void init(){</p>
+<p>char <em>ddr1 = (char</em>)0x30;//SER pin<br>
+*ddr1 = 0x01;</p>
+<p>char <em>ddr2 = (char</em>)0x107;//SCLK pin<br>
+*ddr2 = 0x01;</p>
+<p>char <em>ddr3 = (char</em>)0x10A;// RCLK pin<br>
+*ddr3 = 0x01;</p>
+</code><p><code>}<br>
+</code><br>
+This function is used to initialize the data direction of the SER(A0), SCLK(pin A8),RCLK(pin D49).A0 pin is the pin 0  of port F, A8 pin is the pin 0 of port K and D49 pin is the pin 0 of port L. All of them are used as output , so 0x01 is written to their data direction register of their respective ports.  <br></p>
+<code>
+<p>void out_ds(char data){<br>
+char <em>out = (char</em>)0x31;// SER pin<br>
+*out = data;<br>
+}</p>
+<p>void out_clk(char data){<br>
+char <em>out = (char</em>)0x108;// SCLK pin<br>
+*out = data;<br>
+}</p>
+<p>void out_latch(char data){<br>
+char <em>out = (char</em>)0x10B;// RCLK pin<br>
+*out = data;<br>
+}</p>
+</code>
+These three functions are used to send the output data to their connected pins i.e SER,SCLK,RCLK of the shift register.<br>
+<code>
+<p>void clk_enable(){<br>
+out_clk(0x01);<br>
+delay1();<br>
+out_clk(0x00);<br>
+delay1();<br>
+}</p>
+</code>
+This function is called when we want the data to be shifted in the register, this function makes Serial clock high for certain time and back to low again. During the rising edge of the clock, bits in shift register are shifted. This function is called after the each bit is sent to 
+SER pin.<br> 
+<code>
+<p>void latch_enable(){<br>
+out_latch(0x01);<br>
+delay1();<br>
+out_latch(0x00);<br>
+delay1();<br>
+}</p>
+</code>
+This function is called when we want the data in the shifted regsiter to be copied to latch/storage register. This function is called after sending all the required data to SER pin.<br>
+<code>
+<p>void setup() {<br>
+char data = 0x0F;<br>
+init();<br>
+out_ds(0x00);<br>
+out_clk(0x00);<br>
+out_latch(0x00);</p>
+<p>for(int i=0;i&lt;8;i++){<br>
+out_ds((data&gt;&gt;i)&amp;0x01);<br>
+clk_enable();<br>
+}<br>
+latch_enable();<br>
+delay1();<br>
+}</p>
+</code>
+In the main function, data variable is the data we want to send through SER pin, we initialize data,clk,latch pins to 0 at first.<br><br>
+<p>Inside the for loop, we send each bit at a time , after sending each bit, we call clk_enable() function to make clock high so that data gets shifted in the shift register. <br><br></p>
+<p>After sending 8 bits of data, we call latch_enable to enable the RCLK , so that contents of shift register are copied to storage register and output can been through LEDs.<br></p>
+</section>
+<h2>Final output </h2><h2>
+<img src="output.jpg">
+</h2></section></strong>
+      </div>
+      
+      
+    
+    
+    
+    
+    
+    
+    
+    
+  
+    </body></html>
