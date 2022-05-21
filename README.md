@@ -70,24 +70,25 @@ QA to QH pins all are connected to LEDs.
 
 void init(){
     
-  char *ddr1 = (char*)0x30;//SER pin
+  char *ddr1 = (char *)0x30;//SER pin
   *ddr1 = 0x01;
 
-  char *ddr2 = (char*)0x107;//SCLK pin
+  char *ddr2 = (char *)0x107;//SCLK pin
   *ddr2 = 0x01;
   
-  char *ddr3 = (char*)0x10A;// RCLK pin
+  char *ddr3 = (char *)0x10A;// RCLK pin
   *ddr3 = 0x01;
 
 }
 </code>
+    
 This function is used to initialize the data direction of the SER(A0), SCLK(pin A8),RCLK(pin D49).A0 pin is the pin 0  of port F, A8 pin is the pin 0 of port K and D49 pin is the pin 0 of port L. All of them are used as output , so 0x01 is written to their data direction register of their respective ports.  <br>
 
 <code>
 
 void out_ds(char data){
   
-  char *out = (char*)0x31;// SER pin
+  char *out = (char *)0x31;// SER pin
   
   *out = data;
   
@@ -95,7 +96,7 @@ void out_ds(char data){
 
 void out_clk(char data){
   
-  char *out = (char*)0x108;// SCLK pin
+  char *out = (char *)0x108;// SCLK pin
   
   *out = data;
   
@@ -103,13 +104,14 @@ void out_clk(char data){
 
 void out_latch(char data){
   
-  char *out = (char*)0x10B;// RCLK pin
+  char *out = (char *)0x10B;// RCLK pin
   
   *out = data;
   
 }
 
 </code>
+    
 These three functions are used to send the output data to their connected pins i.e SER,SCLK,RCLK of the shift register.<br>
 
 <code>
