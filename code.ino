@@ -55,7 +55,7 @@ void latch_enable(){
 
 void delay1(){
   volatile long i;
-  for(i=0;i<100000;i++);
+  for(i=0;i<100;i++);
 }
 
 
