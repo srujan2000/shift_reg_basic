@@ -66,8 +66,8 @@ QA to QH pins all are connected to LEDs.
 
 <section id="exp">
 <h2>Code Explanation</h2>
-<code>
 
+ ```
 void init(){
     
   char *ddr1 = (char *)0x30;//SER pin
@@ -80,11 +80,11 @@ void init(){
   *ddr3 = 0x01;
 
 }
-</code>
+```
     
 This function is used to initialize the data direction of the SER(A0), SCLK(pin A8),RCLK(pin D49).A0 pin is the pin 0  of port F, A8 pin is the pin 0 of port K and D49 pin is the pin 0 of port L. All of them are used as output , so 0x01 is written to their data direction register of their respective ports.  <br>
 
-<code>
+```
 
 void out_ds(char data){
   
@@ -110,11 +110,11 @@ void out_latch(char data){
   
 }
 
-</code>
+```
     
 These three functions are used to send the output data to their connected pins i.e SER,SCLK,RCLK of the shift register.<br>
 
-<code>
+```
 
 void clk_enable(){
   
@@ -128,11 +128,11 @@ void clk_enable(){
   
 }
 
-</code>
+```
 This function is called when we want the data to be shifted in the register, this function makes Serial clock high for certain time and back to low again. During the rising edge of the clock, bits in shift register are shifted. This function is called after the each bit is sent to 
 SER pin.<br> 
 
-<code>
+```
 
 void latch_enable(){
   
@@ -146,10 +146,10 @@ void latch_enable(){
   
 }
 
-</code>
+```
 This function is called when we want the data in the shifted regsiter to be copied to latch/storage register. This function is called after sending all the required data to SER pin.<br>
 
-<code>
+```
 
 void setup() {
   
@@ -176,8 +176,7 @@ void setup() {
   delay1();
   
 }
-
-</code>
+```
 In the main function, data variable is the data we want to send through SER pin, we initialize data,clk,latch pins to 0 at first.<br><br>
 
 Inside the for loop, we send each bit at a time , after sending each bit, we call clk_enable() function to make clock high so that data gets shifted in the shift register. <br><br>
